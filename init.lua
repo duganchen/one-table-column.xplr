@@ -4,7 +4,15 @@ local function setup(args)
 
     -- Don't need the column headers anymore.
     xplr.config.general.table.header.cols = {}
+    xplr.config.general.table.header.height = 0
 
+    -- Which means we don't need the tree.
+    xplr.config.general.table.tree = {
+        { format = "", style = {} },
+        { format = "", style = {} },
+        { format = "", style = {} },
+      }
+      
     -- We only need the path column.
     xplr.config.general.table.row.cols = {{
         format = "builtin.fmt_general_table_row_cols_1",
